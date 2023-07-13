@@ -1,0 +1,9 @@
+*.pth
+*.npy
+*.npz
+
+data
+
+__pycache__
+output/
+runs/
