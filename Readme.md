@@ -16,42 +16,92 @@ This is the official implementation of this paper:
 ### Results on 3DPW
 Under PA-MPJPE and MPJPE
 
-<style>
-    .result {
-        width: 70%;
-        text-align: center;
-    }
-    .result th {
-        background: grey;
-        word-wrap: break-word;
-        text-align: center;
-    }
-    .result tr:nth-child(6) { background: grey; }
-    .result tr:nth-child(7) { 
-        background: grey; }
-    .result tr:nth-child(8) { background: grey; }
-    .result tr:nth-child(9) { background: grey; }
-    .result tr:nth-child(10) { background: grey; }
-    .result tr:nth-child(11) { background: grey; }
-</style>
-
-<div class="result">
-
-| Methods | CE | Opt | PA-MPJPE $\downarrow$ | MPJPE $\downarrow$ |
-|:---:|:---:|:---:|:---:|:---:|
-| SPIN |  |  | 59.2 | 96.9 |
-| VIBE |  |  | 51.9 | 82.9 |
-| PARE |  |  | 46.4 | 74.7 |
-| HybrIK |  |  | <u>45.0</u> | <u>74.1</u> |
-| VirtualMarker |  |  | **41.3** | **67.5** |
-| HybrIK | $\checkmark$ |  | 50.9 | 82.0 |s
-| PoseAug | $\checkmark$ |  | 58.5 | 94.1 |
-| AdaptPose | $\checkmark$ |  | 46.5 | <u>81.2</u> |
-| PoseDA | $\checkmark$ |  | 55.3 | 87.7 |
-| ZeDO (J=17) | $\checkmark$ | $\checkmark$ | **42.6** | **80.9** |
-| ZeDO (J=14) | $\checkmark$ | $\checkmark$ | <u>45.4</u> | 88.6 |
-
-</div>
+<table>
+    <tr>
+        <td>Methods</td>
+        <td>CE</td>
+        <td>Opt</td>
+        <td>PA-MPJPE &darr;</td>
+        <td>MPJPE &darr;</td>
+    </tr>
+    <tr>
+        <td>SPIN</td>
+        <td></td>
+        <td></td>
+        <td>59.2</td>
+        <td>96.9</td>
+    </tr>
+    <tr>
+        <td>VIBE</td>
+        <td></td>
+        <td></td>
+        <td>51.9</td>
+        <td>82.9</td>
+    </tr>
+    <tr>
+        <td>PARE</td>
+        <td></td>
+        <td></td>
+        <td>46.4</td>
+        <td>74.7</td>
+    </tr>
+    <tr>
+        <td>HybrIK</td>
+        <td></td>
+        <td></td>
+        <td><u>45.0</u></td>
+        <td><u>74.1</u></td>
+    </tr>
+    <tr>
+        <td>VirtualMarker</td>
+        <td></td>
+        <td></td>
+        <td><b>41.3</b></td>
+        <td><b>67.5</b></td>
+    </tr>
+    <tr style="background-color:grey;">
+        <td>HybrIK</td>
+        <td><span>&#10003;</span></td>
+        <td></td>
+        <td>50.9</td>
+        <td>82.0</td>
+    </tr>
+    <tr style="background-color:grey;">
+        <td>PoseAug</td>
+        <td><span>&#10003;</span></td>
+        <td></td>
+        <td>58.5</td>
+        <td>94.1</td>
+    </tr>
+    <tr style="background-color:grey;">
+        <td>AdaptPose</td>
+        <td><span>&#10003;</span></td>
+        <td></td>
+        <td>46.5</td>
+        <td><u>81.2</u></td>
+    </tr>
+    <tr style="background-color:grey;">
+        <td>PoseDA</td>
+        <td><span>&#10003;</span></td>
+        <td></td>
+        <td>55.3</td>
+        <td>87.7</td>
+    </tr>
+    <tr style="background-color:grey;">
+        <td>ZeDO (J=17)</td>
+        <td><span>&#10003;</span></td>
+        <td><span>&#10003;</span></td>
+        <td><b>42.6</b></td>
+        <td><b>80.9</b></td>
+    </tr>
+    <tr style="background-color:grey;">
+        <td>ZeDO (J=14)</td>
+        <td><span>&#10003;</span></td>
+        <td><span>&#10003;</span></td>
+        <td><u>45.4</u></td>
+        <td>88.6</td>
+    </tr>
+</table>
 
 
 # Evaluate model
