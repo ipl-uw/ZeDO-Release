@@ -49,57 +49,50 @@ Under PA-MPJPE and MPJPE
         <td>HybrIK</td>
         <td></td>
         <td></td>
-        <td><u>45.0</u></td>
-        <td><u>74.1</u></td>
+        <td>45.0</td>
+        <td>74.1</td>
     </tr>
     <tr>
-        <td>VirtualMarker</td>
-        <td></td>
-        <td></td>
-        <td><b>41.3</b></td>
-        <td><b>67.5</b></td>
-    </tr>
-    <tr style="background-color:grey;">
         <td>HybrIK</td>
         <td><span>&#10003;</span></td>
         <td></td>
         <td>50.9</td>
         <td>82.0</td>
     </tr>
-    <tr style="background-color:grey;">
+    <tr>
         <td>PoseAug</td>
         <td><span>&#10003;</span></td>
         <td></td>
         <td>58.5</td>
         <td>94.1</td>
     </tr>
-    <tr style="background-color:grey;">
+    <tr>
         <td>AdaptPose</td>
         <td><span>&#10003;</span></td>
         <td></td>
         <td>46.5</td>
-        <td><u>81.2</u></td>
+        <td>81.2</td>
     </tr>
-    <tr style="background-color:grey;">
+    <tr>
         <td>PoseDA</td>
         <td><span>&#10003;</span></td>
         <td></td>
         <td>55.3</td>
         <td>87.7</td>
     </tr>
-    <tr style="background-color:grey;">
+    <tr>
         <td>ZeDO (J=17)</td>
         <td><span>&#10003;</span></td>
         <td><span>&#10003;</span></td>
         <td><b>42.6</b></td>
         <td><b>80.9</b></td>
     </tr>
-    <tr style="background-color:grey;">
+    <tr>
         <td>ZeDO (J=14)</td>
         <td><span>&#10003;</span></td>
         <td><span>&#10003;</span></td>
-        <td><u>45.4</u></td>
-        <td>88.6</td>
+        <td><b>45.4</b></td>
+        <td><b>88.6</b></td>
     </tr>
 </table>
 
