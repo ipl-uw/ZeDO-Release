@@ -101,6 +101,13 @@ Under PA-MPJPE and MPJPE
         <td><b>39.8</b></td>
         <td><b>78.4</b></td>
     </tr>
+    <tr>
+        <td>ZeDO (J=17, S=50, Additional Training Data)</td>
+        <td><span>&#10003;</span></td>
+        <td><span>&#10003;</span></td>
+        <td><b>30.4</b></td>
+        <td><b>52.4</b></td>
+    </tr>
 </table>
 
 
