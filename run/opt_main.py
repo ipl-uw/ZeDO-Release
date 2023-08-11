@@ -191,7 +191,7 @@ def main(args):
             loss = torch.mean(loss)
             loss.backward()
             rot_optimizer.step()
-        T = T * torch.clamp(rot_opt.scale, min=config.ZeDO.IPO_minScaleT, max=config.ZeDO.IPO_maxScaleT2)
+        T = T * torch.clamp(rot_opt.scale, min=config.ZeDO.IPO_minScaleT, max=config.ZeDO.IPO_maxScaleT)
         rot_mat = rot_opt.generate_matrix()
         
         sample_num = config.ZeDO.OIL_iterations

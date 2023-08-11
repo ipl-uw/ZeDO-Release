@@ -70,10 +70,10 @@ def get_config():
   config.ZeDO = ml_collections.ConfigDict()
   ZeDO = config.ZeDO
   ZeDO.IPO_iterations = 500
-  ZeDO.IPO_keylist = [0, 1, 4]
-  ZeDO.RotAxes='z'
-  ZeDO.IPO_T = 3
-  ZeDO.IPO_minScaleT = 0.5
+  ZeDO.IPO_keylist = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  ZeDO.RotAxes = 'z'
+  ZeDO.IPO_T = 8
+  ZeDO.IPO_minScaleT = 0.2
   ZeDO.IPO_maxScaleT = 2
   ZeDO.OIL_iterations = 1000
   ZeDO.sample = 35

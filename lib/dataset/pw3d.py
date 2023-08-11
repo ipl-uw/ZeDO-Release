@@ -159,7 +159,7 @@ class PW3D:
 
     def _sample(self, sample_interval):
         print(
-            f'Class H36MDataset({self.subset}): sample dataset every {sample_interval} frame')
+            f'Class 3DPWDataset({self.subset}): sample dataset every {sample_interval} frame')
         self.db_2d = self.db_2d[::sample_interval]
         self.db_3d = self.db_3d[::sample_interval]
         self.h = self.h[::sample_interval]

@@ -99,8 +99,8 @@ Under PA-MPJPE and MPJPE
         <td>ZeDO (J=17, Additional Training Data)</td>
         <td><span>&#10003;</span></td>
         <td><span>&#10003;</span></td>
-        <td><b>39.8</b></td>
-        <td><b>78.4</b></td>
+        <td><b>38.6</b></td>
+        <td><b>70.7</b></td>
     </tr>
     <tr>
         <td>ZeDO (J=17, S=50, Additional Training Data)</td>
@@ -150,7 +150,7 @@ ${POSE_ROOT}
 
 ### Evaluation script
 ```
-python -m run.opt_main --config configs/subvp/concat_pose_optimization_<dataset>.py --ckpt_dir ./checkpoint/concatebb --ckpt_name checkpoint_1500.pth  --hypo 1 <--gt> 
+python -m run.opt_main --config configs/subvp/concat_pose_optimization_<dataset>.py --ckpt_dir ./checkpoint/concatebb --ckpt_name checkpoint_1500.pth --hypo 1 <--gt> 
 ```
 
 # Citation
