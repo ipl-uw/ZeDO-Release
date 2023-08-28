@@ -99,8 +99,8 @@ Under PA-MPJPE and MPJPE
         <td>ZeDO (J=17, Additional Training Data)</td>
         <td><span>&#10003;</span></td>
         <td><span>&#10003;</span></td>
-        <td><b>38.6</b></td>
-        <td><b>70.7</b></td>
+        <td><b>38.4</b></td>
+        <td><b>68.3</b></td>
     </tr>
     <tr>
         <td>ZeDO (J=17, S=50, Additional Training Data)</td>
