@@ -1,11 +1,11 @@
-# ZeDO: Back to Optimization: Diffusion-based Zero-Shot 3D Human Pose Estimation
+# ZeDO: Back to Optimization: Diffusion-based Zero-Shot 3D Human Pose Estimation (Accepted by WACV 2024)
 
 [![](http://img.shields.io/badge/cs.CV-arXiv%3A2307.03833-B31B1B.svg)](https://arxiv.org/abs/2307.03833)
 <p align="center"><img src="images/overall.png" width="50%" alt="" /></p>
 
 This is the official implementation of this paper:
 
-> Zhongyu Jiang, Zhuoran Zhou, Lei Li, Wenhao Chai, Cheng-Yen Yang, and Jenq-Neng Hwang. [Back to Optimization: Diffusion-based Zero-Shot 3D Human Pose Estimation](https://arxiv.org/abs/2307.03833) arXiv preprint arXiv:2307.03833 (2023).
+> Zhongyu Jiang, Zhuoran Zhou, Lei Li, Wenhao Chai, Cheng-Yen Yang, and Jenq-Neng Hwang. [Back to Optimization: Diffusion-based Zero-Shot 3D Human Pose Estimation](https://arxiv.org/abs/2307.03833) WACV 2024.
 
 <p align="center">
   <img src="./images/demo1.gif" width="20%" />
@@ -152,6 +152,9 @@ ${POSE_ROOT}
 ```
 python -m run.opt_main --config configs/subvp/concat_pose_optimization_<dataset>.py --ckpt_dir ./checkpoint/concatebb --ckpt_name checkpoint_1500.pth --hypo 1 <--gt> 
 ```
+
+### In the wild inference
+Coming Soon.
 
 # Citation
 If you find this code useful in your project, please consider citing:
