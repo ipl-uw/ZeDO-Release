@@ -159,11 +159,11 @@ Coming Soon.
 # Citation
 If you find this code useful in your project, please consider citing:
 ```
-@article{jiang2023back,
+@inproceedings{Jiang2024ZeDO,
   title={Back to Optimization: Diffusion-based Zero-Shot 3D Human Pose Estimation},
   author={Jiang, Zhongyu and Zhou, Zhuoran and Li, Lei and Chai, Wenhao and Yang, Cheng-Yen and Hwang, Jenq-Neng},
-  journal={arXiv preprint arXiv:2307.03833},
-  year={2023}
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
+  year={2024}
 }
 ```
 
