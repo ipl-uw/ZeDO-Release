@@ -1,6 +1,8 @@
 # ZeDO: Back to Optimization: Diffusion-based Zero-Shot 3D Human Pose Estimation (Accepted by WACV 2024)
 
 [![](http://img.shields.io/badge/cs.CV-arXiv%3A2307.03833-B31B1B.svg)](https://arxiv.org/abs/2307.03833)
+<a href='https://zhyjiang.github.io/ZeDO-proj/'>
+  <img src='https://img.shields.io/badge/Project-Page-%23df5b46?style=flat&logo=Google%20chrome&logoColor=%23df5b46'></a> 
 <p align="center"><img src="images/overall.png" width="50%" alt="" /></p>
 
 This is the official implementation of this paper:
