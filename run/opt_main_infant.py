@@ -17,7 +17,7 @@ from lib.dataset.pw3d import PW3D
 from lib.dataset.syrip import syrip
 from lib.dataset.skiPose import skiPose
 from lib.algorithms.advanced.model import ScoreModelFC_Adv
-from lib.algorithms.advanced.control_model_old import Control_ScoreModelFC_Adv
+from lib.algorithms.advanced.control_model import Control_ScoreModelFC_Adv
 from lib.algorithms.advanced import sde_lib, sampling
 from lib.algorithms.ema import ExponentialMovingAverage
 from lib.algorithms.advanced.model_cond import ScoreModelFC_Adv_cond
