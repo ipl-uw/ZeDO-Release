@@ -236,7 +236,7 @@ class mini_rgbd:
     def read_data(self):
        
        
-        data = np.load('MINI-RGBD.npy',allow_pickle=True).item()
+        data = np.load('data/mini-rgbd/MINI-RGBD.npy',allow_pickle=True).item()
         data = data[self.subset]
         
        

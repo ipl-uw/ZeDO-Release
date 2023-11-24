@@ -220,15 +220,15 @@ class syrip:
         data_2d = []
         frame_name = []
         
-        self.img_root = '/home/zhongyuj/Infant-Pose-Estimation/data/syrip/images/train_infant' if self.subset=='train' else '/home/zhongyuj/Infant-Pose-Estimation/data/syrip/images/validate_infant'
-        self.root = '/home/zhongyuj/Infant-Postural-Symmetry/data/SyRIP_3d_correction'
-        all_name = np.load('/home/zhongyuj/Infant-Postural-Symmetry/data/SyRIP_3d_pred/output_imgnames.npy')
-        train_pose_2d = np.load('/home/zhongyuj/Infant-Postural-Symmetry/train_pose2d.npy',allow_pickle=True).item()
-        test_pose_2d = np.load('/home/zhongyuj/Infant-Postural-Symmetry/test_pose2d.npy',allow_pickle=True).item()
+        self.img_root = 'data/syrip/images/train_infant' if self.subset=='train' else 'data/syrip/images/validate_infant'
+        self.root = 'data/SyRIP_3d_correction'
+        all_name = np.load('dataSy/RIP_3d_pred/output_imgnames.npy')
+        train_pose_2d = np.load('data/train_pose2d.npy',allow_pickle=True).item()
+        test_pose_2d = np.load('data/test_pose2d.npy',allow_pickle=True).item()
         pose_3d = np.load(os.path.join(self.root,'correct_3D.npy'))
         if self.subset!='train': self.subset = 'test'
         
-        img_name = np.load(f'/home/zhongyuj/Infant-Postural-Symmetry/{self.subset}_rysip.npy',allow_pickle=True).item()
+        img_name = np.load(f'data/{self.subset}_rysip.npy',allow_pickle=True).item()
         h = []
         w = []
         K = []
@@ -275,7 +275,7 @@ class syrip:
         
         frame_name = np.array(frame_name)
         if not self.gt2d:
-            new_2d = np.load('dt_syripdata.npy',allow_pickle=True).item()
+            new_2d = np.load('data/syrip/dt_syripdata.npy',allow_pickle=True).item()
             new_2d = new_2d['train'] if self.subset=='train' else new_2d['test']
             for i in range(len(frame_name)):
                 data_2d[i] = new_2d[frame_name[i].split('/')[-1]][self.change_2d]
