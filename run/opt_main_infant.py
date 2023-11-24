@@ -67,7 +67,7 @@ def parse_args(argv):
     parser.add_argument('--ckpt_name', type=str)
     parser.add_argument('--gt', action='store_true', default=False, help='use gt2d as condition')
     parser.add_argument('--hypo', type=int, default=1, help='number of hypotheses')
-    parser.add_argument('--control_net',  default=False, action='store_true')
+    parser.add_argument('--control',  default=False, action='store_true')
     parser.add_argument('--cond',  default=False, action='store_true')
     args = parser.parse_args(argv[1:])
 
@@ -119,7 +119,7 @@ def main(args):
     device = torch.device("cuda")
 
     ''' setup score networks '''
-    if args.control_net:
+    if args.control:
         model = Control_ScoreModelFC_Adv(
             config,
             n_joints=config.DATASET.NUM_JOINT,
