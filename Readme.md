@@ -168,8 +168,25 @@ Coming Soon.
 ## 3D infant pose estimation
 
 ### Data and Model Preparation
-We use [Mini-RGBD](https://www.iosb.fraunhofer.de/en/competences/image-exploitation/object-recognition/sensor-networks/motion-analysis.html) and [SyRIP](https://github.com/ostadabbas/Infant-Postural-Symmetry) in experiments, please follow the offical instructons to download the datasets.
+We use [Mini-RGBD](https://www.iosb.fraunhofer.de/en/competences/image-exploitation/object-recognition/sensor-networks/motion-analysis.html) and [SyRIP](https://github.com/ostadabbas/Infant-Postural-Symmetry) in experiments, please follow the offical instructons to download the datasets under a data directory like this:
 
+
+```
+${POSE_ROOT}
+|-- configs
+|-- lib
+|-- run
+|-- checkpoint
+|-- data
+    |-- mini-rgbd
+    |-- syrip
+|-- clusters
+    |-- 3dhp_cluster1.pkl
+    |-- h36m_cluster1.pkl
+    |-- 3dhp_cluster50.pkl
+    |-- h36m_cluster50.pkl
+```
+Then run syrip_process and mini_process to extrace data npy files. Make sure that the extracted data are placed under corresponding data folders.
 ### Evaluation script
 
 For reproducing our results, we provide our models: [Google-drive](https://drive.google.com/drive/u/0/folders/1rgeVMuMVkf7IUERdSlSNgBF01jRLx-xb) which includes all bakcbones of three training strategies. (ZeDO-i means training from scratch)
@@ -195,6 +212,14 @@ If you find this code useful in your project, please consider citing:
   author={Jiang, Zhongyu and Zhou, Zhuoran and Li, Lei and Chai, Wenhao and Yang, Cheng-Yen and Hwang, Jenq-Neng},
   booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
   year={2024}
+}
+```
+```
+@article{zhou2023efficient,
+  title={Efficient Domain Adaptation via Generative Prior for 3D Infant Pose Estimation},
+  author={Zhou, Zhuoran and Jiang, Zhongyu and Chai, Wenhao and Yang, Cheng-Yen and Li, Lei and Hwang, Jenq-Neng},
+  journal={arXiv preprint arXiv:2311.12043},
+  year={2023}
 }
 ```
 
