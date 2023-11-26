@@ -221,14 +221,14 @@ class syrip:
         frame_name = []
         
         self.img_root = 'data/syrip/images/train_infant' if self.subset=='train' else 'data/syrip/images/validate_infant'
-        self.root = 'data/SyRIP_3d_correction'
-        all_name = np.load('dataSy/RIP_3d_pred/output_imgnames.npy')
-        train_pose_2d = np.load('data/train_pose2d.npy',allow_pickle=True).item()
-        test_pose_2d = np.load('data/test_pose2d.npy',allow_pickle=True).item()
+        self.root = 'data/syrip/SyRIP_3d_correction'
+        all_name = np.load('data/syrip/SyRIP_3d_pred/output_imgnames.npy')
+        train_pose_2d = np.load('data/syrip/train_pose2d.npy',allow_pickle=True).item()
+        test_pose_2d = np.load('data/syrip/test_pose2d.npy',allow_pickle=True).item()
         pose_3d = np.load(os.path.join(self.root,'correct_3D.npy'))
         if self.subset!='train': self.subset = 'test'
         
-        img_name = np.load(f'data/{self.subset}_rysip.npy',allow_pickle=True).item()
+        img_name = np.load(f'data/syrip/{self.subset}_rysip.npy',allow_pickle=True).item()
         h = []
         w = []
         K = []
