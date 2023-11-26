@@ -172,22 +172,18 @@ We use [Mini-RGBD](https://www.iosb.fraunhofer.de/en/competences/image-exploitat
 
 ### Evaluation script
 
-For MINI-RGBD dataset, finetuning with data augmentation 
+For reproducing our results, we provide our models: [Google-drive](https://drive.google.com/drive/u/0/folders/1rgeVMuMVkf7IUERdSlSNgBF01jRLx-xb) which includes all bakcbones of three training strategies. (ZeDO-i means training from scratch)
+
+For MINI-RGBD dataset
 
 ```
-python -m run.opt_main_infant  --config configs/subvp/concat_pose_optimization_mini.py --ckpt_dir checkpoint/mini-rgbd --ckpt_name ft_aug.pth  --gt --hypo 1
-```
-
-For MINI-RGBD dataset, controlling branch with data augmentation 
-
-```
-python -m run.opt_main_infant  --config configs/subvp/concat_pose_optimization_mini.py --ckpt_dir checkpoint/mini-rgbd --ckpt_name ctl_aug.pth  --control --gt --hypo 1
+python -m run.opt_main_infant  --config configs/subvp/concat_pose_optimization_mini.py --ckpt_dir <dir_path> --ckpt_name <ckpt_name>  --gt --hypo 1
 ```
 
 
-For SyRIP dataset, finetuning with data augmentation 
+For SyRIP dataset
 ```
-python -m run.opt_main_infant  --config configs/subvp/concat_pose_optimization_syrip.py --ckpt_dir checkpoint/syrip --ckpt_name ft_aug.pth  --gt -hypo 1
+python -m run.opt_main_infant  --config configs/subvp/concat_pose_optimization_syrip.py --ckpt_dir <dir_path> --ckpt_name <ckpt_name>  --gt -hypo 1
 ```
 
 
