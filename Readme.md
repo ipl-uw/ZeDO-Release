@@ -11,7 +11,7 @@ This is the official implementation of this paper:
 
 And its follow-up paper:
 
-> Zhuoran Zhou, Zhongyu Jiang, Wenhao Chai, Cheng-Yen Yang,  Lei Li and Jenq-Neng Hwang. [Efficient Domain Adaptation via Generative Prior for 3D Infant Pose Estimation](https://arxiv.org/abs/2311.12043) WACVWorkshop 2024.
+> Zhuoran Zhou, Zhongyu Jiang, Wenhao Chai, Cheng-Yen Yang,  Lei Li and Jenq-Neng Hwang. [Efficient Domain Adaptation via Generative Prior for 3D Infant Pose Estimation](https://arxiv.org/abs/2311.12043) WACVW 2024.
 
 <p align="center">
   <img src="./images/demo1.gif" width="20%" />
