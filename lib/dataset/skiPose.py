@@ -110,18 +110,11 @@ class skiPose:
 
     def _sample(self, sample_interval):
         print(
-            f'Class H36MDataset({self.subset}): sample dataset every {sample_interval} frame')
+            f'Class SkiPoseDataset({self.subset}): sample dataset every {sample_interval} frame')
         self.db_2d = self.db_2d[::sample_interval]
         self.db_3d = self.db_3d[::sample_interval]
 
         self.camera_param = self.camera_param[::sample_interval]
-
-    def order_change(self, data):
-
-        b = np.empty_like(data)
-        for i in range(17):
-            b[self.order[i]] = data[i]
-        return b
 
     def read_data(self):
         # read 3d labels

@@ -162,7 +162,15 @@ python -m run.opt_main --config configs/subvp/concat_pose_optimization_<dataset>
 ```
 
 ### In the wild inference
-Coming Soon.
+Please modify the custom dataset `lib/dataset/custom.py` to load your data, following the instructions in the Python file and filling out the `read_data()` function. Use the script for inference:
+```
+python -m run.inference --config configs/subvp/concat_pose_optimization_wild.py --ckpt_dir ./checkpoint/concatebb --ckpt_name checkpoint_1500.pth --hypo 1 <--eval>
+```
+`--eval` is for evaluation if you provide the ground truth 3D keypoints.
+
+The results will be saved in `results.npy` by default. You can change the way saving the data yourself.
+
+**Make sure the 2D keypoints are following the keypoint definitions of Human3.6M**. Otherwise, you may need to train the pose generation model on your keypoint definition.
 
 
 ## 3D infant pose estimation
