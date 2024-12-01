@@ -256,18 +256,6 @@ def main(args):
     logger.info(f'total test samples: {len(test_dataset)}')
 
     ''' setup score networks '''
-    # checkpoint = copy.deepcopy(old_checkpoint)
-    # print(checkpoint.keys())
-    
-    # if args._concate_bb or args._3dhp_bb:
-    #     checkpoint['model_state_dict'] = {}
-        
-    #     for k, v in old_checkpoint['model_state_dict'].items():
-    #         name = k[7:] # remove `module.`
-    #         checkpoint['model_state_dict'][name] = v
-    # old_keys = list(checkpoint['model_state_dict'].keys())
-    # old_keys.remove('module.pre_dense_cond.weight')
-    # old_keys.remove('module.pre_dense_cond.bias')
     # import ipdb;ipdb.set_trace()
     model = ScoreModelFC_Adv(
         config,
@@ -278,17 +266,6 @@ def main(args):
         # n_blocks=1,
     )
     
-    
-    
-    
-    # model.load_state_dict(checkpoint['model_state_dict'], strict=False)
-    # if args.restore_dir is False:
-    # model.freeze()
-    # model.copy_weight()
-    
-    # model.freeze()
-    # import ipdb;ipdb.set_trace()
-    # model.to(device)
     model = torch.nn.DataParallel(model, device_ids=config.GPUs).cuda()
     
     # model.to(device)
@@ -304,27 +281,18 @@ def main(args):
         if config.data.dataset == 'syrip':
             ckpt_path = '/home/zhongyuj/Nitre/ZeDO_plus/output/concate_concate/h36m_12/checkpoint_3000.pth'
         checkpoint = torch.load(ckpt_path, map_location=map_location)
-    
-        # checkpoint = copy.deepcopy(old_checkpoint)
-        # checkpoint['model_state_dict'] = {}
-            
-        # for k, v in old_checkpoint['model_state_dict'].items():
-        #     name = k[7:] # remove `module.`
-        #     checkpoint['model_state_dict'][name] = v
+
             
         
 
         model.load_state_dict(checkpoint['model_state_dict'],strict=False)
         ema.load_state_dict(checkpoint['ema'])
-        # state['step'] = checkpoint['step']
         print(f"=> loaded checkpoint '{ckpt_path}'")
     
     # if args.restore_dir is False:
     start_epoch = 0
         
     state = dict(optimizer=optimizer, model=model, ema=ema, step=0)  # based on iteration instead of epochs
-    # if args.restore_dir :
-    #     state['step'] = checkpoint['step']
    
 
     # Identity func
